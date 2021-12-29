@@ -13,4 +13,6 @@ df_erreur_site['horodate'] = pd.to_datetime(df_erreur_site['horodate'], format='
 df_liste_site = importation_des_donnees_liste_sites.df_data_de_base_site
 
 # -- importation des df dans la methode IDS--#
-calcul_IDS.calcul_ids(df_erreur_site, df_liste_site)
+df_final = calcul_IDS.calcul_ids(df_erreur_site, df_liste_site)
+
+df_final.to_csv('resultat.csv')
